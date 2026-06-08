@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { ArrowUp } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 
 // Subcomponents Imports
 import Header from "./components/Header";
@@ -178,6 +179,9 @@ export default function App() {
           setIsCustomizerOpen={setIsCustomizerOpen}
         />
       )}
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
